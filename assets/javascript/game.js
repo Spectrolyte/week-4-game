@@ -4,10 +4,12 @@ var wins = 0;
 var losses = 0;
 var cpuNum = 0;
 var userNum = 0;
-var crystal1 = 0;
-var crystal2 = 0;
-var crystal3 = 0;
-var crystal4 = 0;
+var crystalVals = {
+	blue: 0,
+	green: 0,
+	purple: 0,
+	yellow: 0
+};
 
 
 $(document).ready(function () {
@@ -16,18 +18,41 @@ $(document).ready(function () {
 		return Math.floor(Math.random() * max) + min;
 	}
 
-	// generate random number for CPU between 19 - 120
+	// generate random number for CPU between 19 - 120 and for crystals 1 - 12
 		// when page loads and when game ends
+	function assignValues () {
+		cpuNum = generateRandomNum(19, 120);
+		userNum = 0;
+		for (var key in crystalVals) {
+			crystalVals[key] = generateRandomNum(1,12);
+		}
+	}
 
-	cpuNum = generateRandomNum(19, 120);
-	
-	crystal1 = generateRandomNum(1,12);
-	crystal2 = generateRandomNum(1,12);
-	crystal3 = generateRandomNum(1,12);
-	crystal4 = generateRandomNum(1,12);
+	// check user number against cpu num
+		// if user number matches cpu num, increment wins
+		// else if user number is greater than cpu num, increment losses
+	function checkNums () {
+		if (userNum === cpuNum) {
+			wins++;
+			assignValues();
+		}
+		else if (userNum > cpuNum) {
+			losses++;
+			assignValues();
+		}
+	}
 
-	$('.blue-crystal').on('click', function () {
-		userNum += crystal1;
+
+	assignValues();
+
+	// listen for click events on crystals
+		// conditional statements to see which crystal was clicked
+		// add that crystal's value to userNum
+	$('.crystal').on('click', function () {
+		var crystalColor = this.alt;
+		userNum += crystalVals[crystalColor];
+		checkNums();
 	});
+
 	
 });
