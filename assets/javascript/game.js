@@ -42,8 +42,17 @@ $(document).ready(function () {
 		}
 	}
 
+	// update cpu num, user num, wins and losses
+	function updateStats () {
+		$('.wins').text('Wins: ' + wins);
+		$('.losses').text('Losses: ' + losses);
+		$('.CPUnum').text('Match this number: ' + cpuNum);
+		$('.userNum').text('Your current count: ' + userNum);
+	}
 
 	assignValues();
+	updateStats();
+
 
 	// listen for click events on crystals
 		// conditional statements to see which crystal was clicked
@@ -52,6 +61,7 @@ $(document).ready(function () {
 		var crystalColor = this.alt;
 		userNum += crystalVals[crystalColor];
 		checkNums();
+		updateStats();
 	});
 
 	
