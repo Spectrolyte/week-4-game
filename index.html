@@ -5,69 +5,71 @@
 	<title>Crystal Collector</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Philosopher" rel="stylesheet">
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="assets/javascript/game.js"></script>
 </head>
 <body>
 	<!-- header -->
 	<div class="page-header">
-	  <h1>Example page header <small>Subtext for header</small></h1>
+	  <h1 class="header">Crystal Collector</h1>
 	</div>
 	<div class="container">
-		<!-- rules -->
-		<div class="row">
-			<section class="col-md-12">
-				<h1>Rules:</h1>
-				<p>These are the rules: Lorem ipsum dolor sit amet, consectetur adipisicing elit. In natus, eligendi excepturi corporis est, unde iste. Eius adipisci perspiciatis dolores quam, esse rerum, excepturi neque quibusdam accusamus quod vel velit.</p>
-				<button class="btn btn-default" type="submit">Start Game</button>
-			</section>
-		</div>
 		<!-- game content -->
 		<div class="row">
 			<!-- left content -->
 			<section class="col-md-6">
+				<!-- rules -->
+				<div class="row">
+					<section class="col-md-12">
+						<h1>Rules:</h1>
+						<p>You are a collector in search of crystals to trade. While on this quest, you stumble upon a seemingly untouched cave covered in rare, colorful crystals. While obtaining the crystals, you hear a powerful voice call out, "You may only take what is allowed, or face the consequences!". You must return with the specified amount of crystals. No more, no less.</p>
+						<p> Match the amount of crystals below by clicking the on crystals themselves. Each crystal is worth a different number. It is up to you to figure out how much! Everytime you click a crystal, your crystal count adds up. If your current crystal count matches the number, you win. Good luck!</p>
+					</section>
+				</div>
 				<!-- CPU and user numbers -->
 				<div class="row">
 					<!-- CPU number -->
 					<section class="col-md-6">
-						<p class="CPUnum">Match this number: </p>
+						<h3 class="CPUnum">Match this number: </h3>
 					</section>
 					<!-- user number -->
 					<section class="col-md-6">
-						<p class="userNum">Your current count: </p>
+						<h3 class="userNum">Your current count: </h3>
 					</section>
 				</div>
 				<!-- wins and losses score -->
 				<div class="row">
 					<section class="col-md-12">
-						<p class="wins">Wins: </p>
-						<p class="losses">Losses: </p>
+						<h3 class="wins">Wins: </h3>
+						<h3 class="losses">Losses: </h3>
 					</section>
 				</div>
 			</section>
 			<!-- crystals -->
 			<section class="col-md-6">
 				<div class="row">
-				  <section class="col-xs-6">
+				  <section class="col-xs-6 crystals">
 				    <a href="#" class="thumbnail">
-				      <img class="crystal blue-crystal" src="assets/images/blue-crystal.png" alt="blue" value="crystalVals[0]">
+				      <img class="crystal blue-crystal img-responsive" src="assets/images/blue-crystal.png" alt="blue" value="crystalVals[0]">
 				    </a>
 				  </section>
-				  <section class="col-xs-6">
+				  <section class="col-xs-6 crystals">
 				    <a href="#" class="thumbnail">
-				      <img class="crystal green-crystal" src="assets/images/green-crystal.png" alt="green">
+				      <img class="crystal green-crystal img-responsive" src="assets/images/green-crystal.png" alt="green">
 				    </a>
 				  </section>
 				</div>
 				<div class="row">
-				  <section class="col-xs-6">
+				  <section class="col-xs-6 crystals">
 				    <a href="#" class="thumbnail">
-				      <img class="crystal purple-crystal" src="assets/images/purple-crystal.png" alt="purple">
+				      <img class="crystal purple-crystal img-responsive" src="assets/images/purple-crystal.png" alt="purple">
 				    </a>
 				  </section>
-				  <section class="col-xs-6">
+				  <section class="col-xs-6 crystals">
 				    <a href="#" class="thumbnail">
-				      <img class="crystal yellow-crystal" src="assets/images/yellow-crystal.png" alt="yellow">
+				      <img class="crystal yellow-crystal img-responsive" src="assets/images/yellow-crystal.png" alt="yellow">
 				    </a>
 				  </section>
 				</div>
