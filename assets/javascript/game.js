@@ -50,6 +50,7 @@ $(document).ready(function () {
 		$('.userNum').text('Your current count: ' + userNum);
 	}
 
+	// loads game stats and assigns game values upon opening the page
 	assignValues();
 	updateStats();
 
